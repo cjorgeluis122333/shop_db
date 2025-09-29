@@ -5,5 +5,9 @@
 docker cp "D:\PROGRAMACION\BBD\PosgredSQL\project\shop_db\pgadmin\storage\jcvidal_google.com\customers.backup" microservice_shop_project:/tmp/customers.backup
 
 
+#Restaurar la base de datos
+# docker exec microservice_shop_project pg_restore -v
+# --clean --no-owner --no-privileges -U jcvidal
+# -d shop_db /tmp/customers.backup   # dentro de shop_db: <- restaura el backup que copiamos a temp
 
 docker exec microservice_shop_project pg_restore -v --clean --no-owner --no-privileges -U jcvidal -d shop_db /tmp/customers.backup
