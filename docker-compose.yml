@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  dbbPractice:
+    image: postgres:17.5
+    container_name: microservice_shop_project
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=jcvidal
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=shop_db
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
+  pdAdmin:
+    image: dpage/pgadmin4
+    container_name: shop_db_container
+    restart: always
+    depends_on:
+      - dbbPractice
+    ports:
+      - "10000:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=jcvidal@google.com
+      - PGADMIN_DEFAULT_PASSWORD=123456
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+      - ./pgadmin:/certs/server.cert
+      - ./pgadmin:/certs/server.key
+      - ./pgadmin:/pgadmin4/servers.json

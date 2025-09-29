@@ -1,0 +1,9 @@
+#Copiar el restore a una ruta dentro del el mismo projecto:
+#EJEMPLO:
+#docker cp "Absolute Path" <container_name>:/tmp/customers.backup
+
+docker cp "D:\PROGRAMACION\BBD\PosgredSQL\project\shop_db\pgadmin\storage\jcvidal_google.com\customers.backup" microservice_shop_project:/tmp/customers.backup
+
+
+
+docker exec microservice_shop_project pg_restore -v --clean --no-owner --no-privileges -U jcvidal -d shop_db /tmp/customers.backup
