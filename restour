@@ -11,3 +11,11 @@ docker cp "D:\PROGRAMACION\BBD\PosgredSQL\project\shop_db\pgadmin\storage\jcvida
 # -d shop_db /tmp/customers.backup   # dentro de shop_db: <- restaura el backup que copiamos a temp
 
 docker exec microservice_shop_project pg_restore -v --clean --no-owner --no-privileges -U jcvidal -d shop_db /tmp/customers.backup
+
+
+
+             #More Details
+#microservice_shop_project → el nombre de tu contenedor de Postgres.
+#jcvidal → tu usuario de Postgres (definido en POSTGRES_USER).
+#shop_db → la base de datos destino (definida en POSTGRES_DB).
+#/tmp/customers.backup → la ruta dentro del contenedor donde copiaste el archivo con docker cp.
