@@ -1,0 +1,30 @@
+251023194434000607,Error loading shared library libzstd.so.1: No such file or directory (needed by /usr/local/pgsql-17/pg_restore)
+
+251023194434007599,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_CCtx_setParameter: symbol not found
+
+251023194434008662,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_CStreamOutSize: symbol not found
+
+251023194434009707,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_freeCStream: symbol not found
+
+251023194434010615,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_DStreamOutSize: symbol not found
+
+251023194434011352,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_maxCLevel: symbol not found
+
+251023194434012180,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_DStreamInSize: symbol not found
+
+251023194434012810,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_createDStream: symbol not found
+
+251023194434013444,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_minCLevel: symbol not found
+
+251023194434014058,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_decompressStream: symbol not found
+
+251023194434014657,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_createCStream: symbol not found
+
+251023194434015194,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_isError: symbol not found
+
+251023194434015726,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_freeDStream: symbol not found
+
+251023194434016254,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_getErrorName: symbol not found
+
+251023194434016806,Error relocating /usr/local/pgsql-17/pg_restore: ZSTD_compressStream2: symbol not found
+
