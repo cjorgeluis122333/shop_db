@@ -1,0 +1,23 @@
+Paso 1 Verificar contenido del archivo .csv
+   type "C:\Users\cjorg\Downloads\4to Año\Sistemas de la Informacion\Tare Extraclase practica\Fuentes de datos\7- Cardiocentro\Municipio.csv" | more
+
+
+//Crear la tabla con los datos del archibo
+/*
+Es nesestario tomar todos los campos que estan en el archivo y apartir de alli crear la tabla
+*/
+docker exec -it microservice_shop_project psql -U jcvidal -d cardiocentro -c "
+CREATE TABLE municipio (
+    code INTEGER PRIMARY KEY,
+    name TEXT,
+    provincia TEXT,
+    region TEXT
+);"
+
+
+//Paso 3: Copiar los datos (Formato UTF-8)
+docker exec -it microservice_shop_project psql -U jcvidal -d cardiocentro -c "\COPY municipio FROM '/tmp/Municipio.csv' DELIMITER ';' CSV HEADER;"
+
+
+//Paso 3: Copiar los datos (Si el formato no es UTF-8)
+docker exec -it microservice_shop_project psql -U jcvidal -d cardiocentro -c "\COPY municipio FROM '/tmp/Municipio.csv' DELIMITER ';' CSV HEADER ENCODING 'WIN1252';"
