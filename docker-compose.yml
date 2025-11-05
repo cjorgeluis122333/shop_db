@@ -6,7 +6,7 @@ services:
     container_name: microservice_shop_project
     restart: always
     ports:
-      - "5432:5432"
+      - "9091:5432"
     environment:
       - POSTGRES_USER=jcvidal
       - POSTGRES_PASSWORD=123456
