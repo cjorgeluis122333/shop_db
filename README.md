@@ -20,13 +20,13 @@ Copia el archivo de backup desde tu máquina local al contenedor PostgreSQL.
 Ejemplo:
 
 ```bash
-docker cp "D:\PROGRAMACION\BBD\PosgredSQL\project\shop_db\pgadmin\storage\jcvidal_google.com\solicitud.backup" microservice_shop_project:/tmp/solicitud.backup
+docker cp "D:\PROGRAMACION\BBD\PosgredSQL\project\shop_db\pgadmin\storage\jcvidal_google.com\para_dario.sql" microservice_shop_project:/tmp/para_dario.sql
 ```
 
 ### ***Paso 2. Restaurar la base de datos***
 `dentro de shop_db: <- restaura el backup que copiamos a temp`
 ```bash
-docker exec microservice_shop_project pg_restore -v --clean --no-owner --no-privileges -U jcvidal -d solicitud_db /tmp/solicitud.backup
+docker exec microservice_shop_project pg_restore -v --clean --no-owner --no-privileges -U jcvidal -d dario /tmp/para_dario.sql
 ```
 
 ### 💡 Detalles de los parámetros

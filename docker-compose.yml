@@ -21,7 +21,7 @@ services:
     depends_on:
       - dbbPractice
     ports:
-      - "10000:80"
+      - "9011:80"
     environment:
       - PGADMIN_DEFAULT_EMAIL=jcvidal@google.com
       - PGADMIN_DEFAULT_PASSWORD=123456
